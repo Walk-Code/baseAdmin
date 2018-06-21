@@ -1,0 +1,20 @@
+.ex-inner{
+    padding: 10px;
+}
+
+.ex-model{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.user-image{
+    width: 45px;
+}
+.bg-white{
+    background-color: #FFF;
+}
+.column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
