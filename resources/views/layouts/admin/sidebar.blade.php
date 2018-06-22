@@ -27,16 +27,19 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <!-- Optionally, you can add icons to the links -->
-            <li class="treeview @if(in_array("user",explode("/",session("left-bar")))) active @endif">
-                <a href="#"><span>用户管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <li class="treeview">
+                <a href="#"><i class="fa fa-dashboard"></i><span>用户管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="{{url('/admin/user')}}">用户管理</a>
+                        <a href="{{url('/admin/user')}}">
+                            <i class="fa fa-circle-o"></i>
+                            用户管理
+                        </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="treeview @if(in_array("topic",explode("/",session("left-bar")))) active @endif">
+            <li class="treeview">
                 <a href="{{url('/admin/business')}}"><span>话题管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li>
@@ -45,7 +48,7 @@
                 </ul>
             </li>
 
-            <li class="treeview @if(in_array("system",explode("/",session("left-bar")))) active @endif">
+            <li class="treeview">
                 <a href="#"><span>系统管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url('/admin/system/ip')}}">Ip列表</a></li>
@@ -55,7 +58,7 @@
                 </ul>
             </li>
 
-            <li class="treeview @if(in_array("model",explode("/",session("left-bar")))) active @endif">
+            <li class="treeview">
                 <a href="#"><span>版块设置</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#"></a></li>

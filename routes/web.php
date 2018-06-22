@@ -26,6 +26,7 @@ Route::post('/admin/register', 'AdminAuth\RegisterController@register');
 Route::group(['prefix'=>'admin','middleware'=>'admin'],function () {
 
     Route::get('/', 'Admin\HomeController@index');
+    Route::get("/user",'Admin\UserController@index');
 
 });
 Auth::routes();

@@ -11,8 +11,9 @@
 {{--<script src="{{asset('/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>--}}
 <!-- Bootstrap 3.3.6 -->
 <script src="{{asset('/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js')}}"></script>
-
+<script src="{{asset('/js/fixedItem.js')}}"></script>
 <script src="{{asset('/AdminLTE-2.3.11/dist/js/app.js')}}"></script>
+
 <script src="{{asset('/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
 <!-- jQuery-ui -->
 {{--<script src="{{asset('/AdminLTE-2.3.11/plugins/jQueryUI/jquery-ui.min.js')}}" ></script>--}}
