@@ -40,21 +40,32 @@
             </li>
 
             <li class="treeview">
-                <a href="{{url('/admin/business')}}"><span>话题管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="{{url('/admin/business')}}"><i class="fa fa-files-o"></i><span>话题管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="{{url('/admin/topic')}}">话题</a>
+                        <a href="{{url('/admin/topic')}}">
+                            <i class="fa fa-circle-o"></i>
+                            话题
+                        </a>
                     </li>
                 </ul>
             </li>
 
             <li class="treeview">
-                <a href="#"><span>系统管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-laptop"></i><span>系统管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url('/admin/system/ip')}}">Ip列表</a></li>
-                </ul>
-                <ul class="treeview-menu">
-                    <li><a href="{{url('/admin/system/logs')}}">错误日志</a></li>
+                    <li>
+                        <a href="{{url('/admin/system/ip')}}">
+                            <i class="fa fa-circle-o"></i>
+                            Ip列表
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('/admin/system/logs')}}">
+                            <i class="fa fa-circle-o"></i>
+                            错误日志
+                        </a>
+                    </li>
                 </ul>
             </li>
 

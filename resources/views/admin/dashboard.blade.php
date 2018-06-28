@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>{{ $page_title or "AdminLTE Dashboard" }}</title>
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<head>
+<head ng-app="app">
     <link rel="icon" href="{{asset("/css/app-icon.png")}}">
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset("/AdminLTE-2.3.11/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css"/>
@@ -19,23 +19,26 @@
     <link href="{{ asset("/EX/plugins/animate/animate.css") }}" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="{{ asset('/AdminLTE-2.3.11/plugins/nprogress/nprogress.css')}}"/>
-    <script src="{{ asset('/AdminLTE-2.3.11/plugins/nprogress/nprogress.js') }}"></script>
-    <script src="{{ asset('/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/AdminLTE-2.3.11/plugins/nprogress/nprogress.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
 
     <link href="{{asset('/AdminLTE-2.3.11/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet"
           type="text/css"/>
 
-    <script src="{{ asset('/AdminLTE-2.3.11/plugins/jQueryUI/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('/AdminLTE-2.3.11/plugins/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/AdminLTE-2.3.11/plugins/jQueryUI/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/AdminLTE-2.3.11/plugins/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
 
-    <link href="{{ asset("/AdminLTE-2.3.11/dist/css/skins/_all-skins.min.css") }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset("/EX/admin.css") }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/AdminLTE-2.3.11/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/EX/admin.css') }}" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="{{ asset('/angular-1.7.2/angular.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/angular-sanitize.js') }}"></script>
     <!-- [endif]-->
 </head>
 <body class="hold-transition skin-yellow">
 <div class="wrapper">
 
-    <!-- Header -->
+<!-- Header -->
 @include('layouts.admin.header')
 
 <!-- Sidebar -->
@@ -128,7 +131,7 @@
             </div>
         @endif
         <section class="content">
-            <!-- Your Page Content Here -->
+            <!-- 内容 -->
             @yield('content')
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
