@@ -17,10 +17,16 @@
                 data: $.param({
 
                 }),
-
+                loadingShow : true,
+                success: function (status, data) {
+                    
+                },
+                error: function (status, data) {
+                    
+                }
             });
-        }
-    })
+        };
 
-
+        $scope.test();
+    });
 </script>

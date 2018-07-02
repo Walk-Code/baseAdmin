@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/builtDate', function () {
+
+});
+
 Route::post('/login','Auth\LoginController@postLogin');
 
 
