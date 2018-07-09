@@ -150,6 +150,9 @@ return [
         /*
          * Package Service Providers...
          */
+		//reliese/laravel
+		Reliese\Coders\CodersServiceProvider::class,
+
 
         /*
          * Application Service Providers...

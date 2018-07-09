@@ -11,11 +11,21 @@
 |
 */
 
+use HelperUtils\DateHelper\DateHelper;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/builtDate', function () {
+
+	return \App\Models\SystemMenu1::builtTree2();
+
+});
+
+Route::get('/builtDateUseCode', function () {
+	$menu = new \App\Models\XqyJxsSpecificKnowledge();
+	return \App\Models\XqyJxsSpecificKnowledge::builtTree($menu->filterData(), 0);
 
 });
 
