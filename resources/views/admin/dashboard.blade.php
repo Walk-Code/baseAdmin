@@ -30,9 +30,11 @@
 
     <link href="{{ asset('/AdminLTE-2.3.11/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('/EX/admin.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/AdminLTE-2.3.11/plugins/iCheck/all.css') }}" rel="stylesheet" type="text/css"/>
 
-    <script type="text/javascript" src="{{ asset('/angular-1.7.2/angular.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/js/angular-sanitize.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/AdminLTE-2.3.11/plugins/iCheck/icheck.js') }}"></script>
+   {{-- <script type="text/javascript" src="{{ asset('/angular-1.7.2/angular.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/angular-sanitize.js') }}"></script>--}}
     <!-- [endif]-->
 </head>
 <body class="hold-transition skin-yellow">

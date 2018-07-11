@@ -96,7 +96,7 @@ class XqyJxsSpecificKnowledge extends Eloquent {
 		$tree       = [];
 
 		foreach ($knowledges as $knowledge) {
-			$knowledge->sul                   = str_repeat('-|', $knowledge->level);
+			$knowledge->sul                   = str_repeat('&nbsp;&nbsp;-|&nbsp;&nbsp', $knowledge->level);
 			$menus[$knowledge->code]          = $knowledge->toArray();
 			$menus[$knowledge->code]['child'] = [];
 		}
@@ -105,7 +105,7 @@ class XqyJxsSpecificKnowledge extends Eloquent {
 			if (isset($menus[$item['parent_code']])) {
 				$menus[$item['parent_code']]['child'][] = &$menus[$key];
 			}
-			echo str_repeat('&nbsp;&nbsp;-|&nbsp;&nbsp;', $item['level']) . $item['name'] . $item['code'] . '<br/>';
+			//echo str_repeat('&nbsp;&nbsp;-|&nbsp;&nbsp;', $item['level']) . $item['name'] . $item['code'] . '<br/>';
 			array_push($newData, $menus[$key]);
 			$tree[] = &$menus[$key];
 		}

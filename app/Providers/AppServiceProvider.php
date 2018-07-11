@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //自动根据表生成model
+        if ($this->app->environment() == 'local') {
+            $this->app->register(\Reliese\Coders\CodersServiceProvider::class);
+        }
     }
 }

@@ -1,32 +1,48 @@
 <?php
 
+/**
+ * Created by Reliese Model.
+ * Date: Sun, 08 Jul 2018 22:55:29 +0800.
+ */
+
 namespace App\Models;
 
-use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-
+/**
+ * Class Admin
+ * 
+ * @property int $id
+ * @property string $username
+ * @property string $email
+ * @property string $head_img
+ * @property string $password
+ * @property string $uuid
+ * @property int $status
+ * @property string $remember_token
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ *
+ * @package App\Models
+ */
 class Admin extends Authenticatable
 {
-    use Notifiable;
+	protected $casts = [
+		'status' => 'int'
+	];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password', 'uuid'
-    ];
+	protected $hidden = [
+		'password',
+		'remember_token'
+	];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
+	protected $fillable = [
+		'username',
+		'email',
+		'head_img',
+		'password',
+		'uuid',
+		'status',
+		'remember_token'
+	];
 }
