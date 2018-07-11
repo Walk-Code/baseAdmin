@@ -34,6 +34,8 @@ Route::get('/builtDateUseCode', function () {
 
 });
 
+Route::get('/menus', 'Admin');
+
 Route::post('/login', 'Auth\LoginController@postLogin');
 
 

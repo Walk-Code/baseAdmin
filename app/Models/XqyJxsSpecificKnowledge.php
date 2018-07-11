@@ -94,23 +94,23 @@ class XqyJxsSpecificKnowledge extends Eloquent {
 		$knowledges = XqyJxsSpecificKnowledge::get();
 		$menus      = [];
 		$tree       = [];
-		$option     = [];
 
 		foreach ($knowledges as $knowledge) {
-			$menus[$knowledge->code]          = $knowledge;
+			$knowledge->sul                   = str_repeat('-|', $knowledge->level);
+			$menus[$knowledge->code]          = $knowledge->toArray();
 			$menus[$knowledge->code]['child'] = [];
 		}
-
+		$newData = [];
 		foreach ($menus as $key => $item) {
-			if (isset($item->parent_code) || $item->parent_code == 0) {
-				$option[]             = $item;
-				$menus[$key]['child'] = $option;
+			if (isset($menus[$item['parent_code']])) {
+				$menus[$item['parent_code']]['child'][] = &$menus[$key];
 			}
-
-			$tree[] = $menus[$key];
+			echo str_repeat('&nbsp;&nbsp;-|&nbsp;&nbsp;', $item['level']) . $item['name'] . $item['code'] . '<br/>';
+			array_push($newData, $menus[$key]);
+			$tree[] = &$menus[$key];
 		}
-
-		return $tree;
+		//echo '当前保存的数据：' . json_encode($newData) . PHP_EOL;
+		return $newData;
 	}
 
 }
